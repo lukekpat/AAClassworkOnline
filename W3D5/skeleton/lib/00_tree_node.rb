@@ -10,5 +10,7 @@ class PolyTreeNode
         @children = []
     end
 
-    
+    def parent=(parent)
+
+    end
 end

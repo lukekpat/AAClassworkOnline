@@ -27,6 +27,32 @@ class PolyTreeNode
     end
 
     def remove_child(child_node)
-        children.delete(child_node)
+        raise "not a child" if child_node.parent.nil?
+        child_node.parent = nil
+    end
+
+    def dfs(target_value)
+        return nil if self.nil?
+        return self if self.value == target_value
+
+        self.children.each do |child|
+            result = child.dfs(target_value)
+            return result unless result.nil?
+        end
+
+        nil
+    end
+
+    def bfs(target_value)
+        list = [self]
+
+        until list.empty?
+            current = list.pop
+            return current if current.value == target_value
+
+            current.children.each do |child|
+                list.unshift(child)
+            end
+        end
     end
 end

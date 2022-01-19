@@ -1,7 +1,7 @@
 # PHASE 2
-def convert_to_int(str)
-  Integer(str)
-end
+#def convert_to_int(str)
+#  Integer(str)
+#end
 
 # PHASE 3
 FRUITS = ["apple", "banana", "orange"]
@@ -15,11 +15,21 @@ def reaction(maybe_fruit)
 end
 
 def feed_me_a_fruit
-  puts "Hello, I am a friendly monster. :)"
-
-  puts "Feed me a fruit! (Enter the name of a fruit:)"
-  maybe_fruit = gets.chomp
-  reaction(maybe_fruit) 
+  while true 
+    puts "Hello, I am a friendly monster. :)"
+    begin
+    puts "Feed me a fruit! (Enter the name of a fruit:)"
+    maybe_fruit = gets.chomp
+    
+      reaction(maybe_fruit)
+    rescue StandardError => e
+      puts "That fruit, #{maybe_fruit} is no good!"
+      puts "Give me coffee!\n"
+      user_response = gets.chomp 
+      retry if user_response == "coffee"
+    end
+    reaction(maybe_fruit) 
+  end
 end  
 
 # PHASE 4

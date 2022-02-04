@@ -10,6 +10,7 @@ ActiveRecord::Base.transaction do
   User.destroy_all 
   Artwork.destroy_all
   ArtworkShare.destroy_all
+  Comment.destroy_all
 
   user1 = User.create!(username: 'CoolKid') #id 1
   user2 = User.create!(username: 'RadDude') #id 2
@@ -24,4 +25,8 @@ ActiveRecord::Base.transaction do
 
   share1 = ArtworkShare.create!(artwork_id: art1.id, viewer_id: user4.id)
   share2 = ArtworkShare.create!(artwork_id: art3.id, viewer_id: user4.id)
+
+  comment1 = Comment.create!(user_id: user3.id, artwork_id: art1.id, body: "Cool art man!")
+  comment2 = Comment.create!(user_id: user2.id, artwork_id: art1.id, body: "Dude, such artistic")
+  comment3 = Comment.create!(user_id: user2.id, artwork_id: art2.id, body: "I wish I could paint that.")
 end

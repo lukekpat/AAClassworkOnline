@@ -5,8 +5,11 @@ Rails.application.routes.draw do
     resources :artworks, only: :index 
     #^^^ This creates user_id 
   end
-   resources :artworks, only:[:show, :create, :update, :destroy]
-   resources :artwork_shares, only:[:create, :destroy]
+  resources :artworks, only:[:show, :create, :update, :destroy]
+  resources :artwork_shares, only:[:create, :destroy]
+  resources :comments, only:[:index, :create, :destroy]
+
+
 
   # get '/users', to: 'users#index' 
   # get '/users/:id', to: 'users#show'

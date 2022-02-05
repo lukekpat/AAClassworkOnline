@@ -13,14 +13,15 @@
 #
 class Cat < ApplicationRecord
   include ActionView::Helpers::DateHelper
-  COLORS = [:brown, :white, :black, :gray]
+  COLORS = ['brown', 'white', 'black', 'gray']
   validates :color, inclusion: COLORS
   validates :birth_date, :color, :name, :sex, presence: true 
   validates :sex, inclusion: ["M", "F"]
 
   def age
-    now = Time.now.utc.to_date 
-    dob = self.birth_date
-    now.year - dob.year
+    time_ago_in_words(birth_date)
+    # now = Time.now.utc.to_date 
+    # dob = self.birth_date
+    # now.year - dob.year
   end
 end

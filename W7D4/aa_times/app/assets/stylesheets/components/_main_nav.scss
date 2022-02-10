@@ -1,0 +1,59 @@
+.main-nav {
+  width: 100%;
+  display: flex;
+  background-color: red;
+  justify-content: space-between;
+}
+
+.left-nav > ul,
+.right-nav > ul {
+}
+
+.left-nav {
+  
+
+  
+
+  
+
+  > ul {
+    display: flex;
+
+    > li {
+
+    }
+  }
+
+  span {
+
+  }
+}
+
+.right-nav  {
+  
+  display: flex;
+
+  > ul {
+
+    > li {
+  
+    }
+
+    > li:last-of-type {
+  
+    }
+  }
+  
+  i {
+
+  }
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+
+}
+
+img {
+  height: 14px;
+}

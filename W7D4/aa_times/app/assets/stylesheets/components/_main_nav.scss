@@ -1,26 +1,23 @@
 .main-nav {
   width: 100%;
   display: flex;
-  background-color: red;
+  // background-color: red;
   justify-content: space-between;
+  border-bottom: solid 1px;
+  height: 40px;
 }
 
 .left-nav > ul,
 .right-nav > ul {
+  display: flex;
 }
 
 .left-nav {
-  
-
-  
-
-  
-
+  display: flex;
+  align-items: center;
   > ul {
-    display: flex;
-
     > li {
-
+      margin-left: 20px;
     }
   }
 
@@ -30,13 +27,12 @@
 }
 
 .right-nav  {
-  
   display: flex;
-
+  align-items: center;
   > ul {
 
     > li {
-  
+      padding-left: 20px;
     }
 
     > li:last-of-type {
@@ -48,6 +44,15 @@
 
   }
 }
+
+#sections-sidebar-btn:hover, #search-modal-btn:hover {
+  background-color: lightgrey;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+
+
 
 .left-nav > ul > li:hover,
 .right-nav > ul > li:last-of-type:hover {

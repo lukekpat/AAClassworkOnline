@@ -3,7 +3,7 @@
   display: flex;
   // background-color: red;
   justify-content: space-between;
-  border-bottom: solid 1px;
+  border-bottom: 1px solid $light-gray;
   height: 40px;
 }
 
@@ -18,6 +18,8 @@
   > ul {
     > li {
       margin-left: 20px;
+      padding: 6px;
+      border-radius: 4px;
     }
   }
 
@@ -32,7 +34,9 @@
   > ul {
 
     > li {
-      padding-left: 20px;
+      margin-left: 20px;
+      padding: 6px;
+      border-radius: 4px;
     }
 
     > li:last-of-type {
@@ -45,13 +49,25 @@
   }
 }
 
-#sections-sidebar-btn:hover, #search-modal-btn:hover {
+#sections-sidebar-btn:hover, #search-modal-btn:hover, #gear:hover {
   background-color: lightgrey;
+  cursor: pointer;
+}
+
+#subscribe, #login {
+  background-color: rgb(118, 168, 214);
   padding: 6px;
   border-radius: 4px;
 }
 
+#subscribe a, #login a {
+  color: white;
+  font-weight: bolder;
+}
 
+#subscribe:hover, #login:hover {
+  background-color: rgb(88, 127, 163);
+}
 
 
 .left-nav > ul > li:hover,
